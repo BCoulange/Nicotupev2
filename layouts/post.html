@@ -1,0 +1,20 @@
+<h1 class="page-header"><%=@item[:title]%> <small><%= @item[:date] %></small></h2>
+<div class="row">
+
+		<img src="<%= lead_bandeau @item %>" class="col-md-12"></img>
+</div>
+<div class="row">
+	<div class="col-md-8 col-xs-12">        
+    	<div class="site">
+			
+			
+			<div class="post"><%= yield %></div>
+        </div>
+    </div>
+<div class="col-md-4 hidden-xs well">
+	<div class='cloud'>
+       by B. Coulange
+    </div>
+</div>
+
+

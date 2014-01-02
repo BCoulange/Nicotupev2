@@ -12,7 +12,7 @@ module LeadHelper
 
   def lead_bandeau(item)
   	image = "mandarines.jpg" || item[:lead_image]
-  	"/images/lead/"+image.split(".")[0]+"-thumbnail."+image.split(".")[1]
+  	"/images/lead/"+image.split(".")[0]+"-bandeau."+image.split(".")[1]
   end
 
   def leads

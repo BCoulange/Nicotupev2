@@ -27,6 +27,7 @@ compile '/articles/*' do
     when 'md'
       filter :kramdown
   end
+  layout 'post'
   layout 'default'
 end
 
