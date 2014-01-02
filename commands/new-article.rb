@@ -16,7 +16,9 @@ run do |opts, args, cmd|
   puts "Creating #{slug}!"
 
   open("content/articles/#{Time.now.strftime('%Y-%m-%d-%H')}-#{slug}.md", 'w+') do |post|
+    post.puts "---"
     post.puts "kind: article"
+    post.puts "date: #{Time.now.strftime('%Y-%m-%d-%H')}"    
     post.puts "title: #{title}"
     post.puts "---"
   end

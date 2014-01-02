@@ -30,6 +30,14 @@ compile '/articles/*' do
   layout 'default'
 end
 
+compile '/editos/*' do
+  case item[:extension]
+    when 'md'
+      filter :kramdown
+  end
+  layout 'default'
+end
+
 
 compile '*' do
   if item.binary?

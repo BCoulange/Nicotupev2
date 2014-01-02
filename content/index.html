@@ -5,7 +5,8 @@ title: Nicolas tupégabet n'est pas sut internet
 
 <div class="row">
 	<div class="col-md-4 well">  
-      {{ site.data.edito | markdownify }}
+    <h3><%= last_edito[:title] %></h3>
+    <%= last_edito.compiled_content %>
 	</div>
   <% [articles[0]].each do |article| %>
     <a href="<%= article.path %>" >
