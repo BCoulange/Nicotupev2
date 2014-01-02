@@ -38,6 +38,18 @@ compile '/editos/*' do
   layout 'default'
 end
 
+compile '/images/lead/*', :rep => :home do
+  filter :resize, :width => 730, :height => 498
+end
+
+compile '/images/lead/*', :rep => :thumbnail do
+  filter :resize, :width => 300, :height => 200
+end
+
+compile '/images/lead/*', :rep => :bandeau do
+  filter :resize, :width => 1440, :height => 100
+end
+
 
 compile '*' do
   if item.binary?
@@ -54,6 +66,16 @@ end
 
 route '/articles/*' do
   item.identifier.chop + '.html'
+end
+
+route '/images/lead/*', :rep => :home do
+    item.identifier.chop + '-home.' + item[:extension]
+end
+route '/images/lead/*', :rep => :thumbnail do
+    item.identifier.chop + '-thumbnail.' + item[:extension]
+end
+route '/images/lead/*', :rep => :bandeau do
+    item.identifier.chop + '-bandeau.' + item[:extension]
 end
 
 route '*' do

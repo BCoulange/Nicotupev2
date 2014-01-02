@@ -3,4 +3,5 @@ include Nanoc::Helpers::Tagging
 include Nanoc::Helpers::Blogging
 include Nanoc::Helpers::Capturing
 
+include LeadHelper
 include EditosHelper
